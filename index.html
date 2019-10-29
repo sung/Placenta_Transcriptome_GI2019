@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet'>
+
+
+
+<title>The RNA landscape of the human placenta in health and disease</title>
+
+
+
+
+
+<style>
+@page {
+size: 46.8in 34in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 46.8in;
+height: 34in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 46.8in;
+height: 34in;
+padding: 0cm;
+}
+.title_container {
+width: 46.8in;
+height: calc(34in * 0.15);
+overflow: hidden;
+background-color: #91B9A4;
+border: 1cm solid #91B9A4;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #91B9A4;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #91B9A4;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #ffffff;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Helvetica;
+}
+/* unvisited link */
+a:link {
+color: #0b4545;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #0b4545;
+}
+
+/* mouse over link */
+a:hover {
+color: #0b4545;
+}
+
+/* selected link */
+a:active {
+color: #0b4545;
+}
+.poster_body {
+-webkit-column-count: 4; /* Chrome, Safari, Opera */
+-moz-column-count: 4; /* Firefox */
+column-count: 4;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #008080;
+-moz-column-rule-color: #008080;
+column-rule-color: #008080;
+column-gap: 1cm;
+padding-left: calc(1cm / 2);
+padding-right: calc(1cm / 2);
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 80pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(46.8in + 1cm + 1cm);
+height: calc(34in * 0.83);
+padding-top: calc(34in * 0.005);
+padding-bottom: calc(34in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 45pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #ffffff;
+font-size: 50pt;
+border: 2mm solid #0b4545;
+background-color: #91B9A4;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #0b4545;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #91B9A424;
+color: #91B9A4;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'Figures/Cambridge/Black%20and%20white%20logo/Screen%20and%20web/Black%20and%20white%20RGB_DM.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">The RNA landscape of the human placenta in health and disease</h1>
+<h3 id="author">Sungsam Gong<sup>1, <a class="orcid" href="https://orcid.org/0000-0001-5796-4423"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Francesca Gaccioli<sup>1</sup>, Justyna Dopierala<sup>1</sup>, Ulla Sovio<sup>1</sup>, Gordon Smith<sup>1</sup>, D Stephen Charnock-Jones<sup>1</sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> Department of Obstetrics and Gynaecology, University of Cambridge</br>NIHR Cambridge Biomedical Research Centre, Cambridge, United Kingdom</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=Figures/NIHR/Cambridge-Biomedical-Research-Centre_logo_outlined_RGB_BLACK-2.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<style>
+.logo_left{
+width: 15%
+}
+.logo_right{
+width: 15%
+}
+.poster_title {
+width: 70%
+}
+img{
+    margin-top: .9cm
+}
+</style>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<div id="motivations" class="section level2">
+<h2>Motivations</h2>
+<ol style="list-style-type: decimal">
+<li>Placental dysfunction underlies a large proportion of maternal and perinatal morbidity and mortality, which is a half the total burden due to cancer.</li>
+<li>The placental tissues are under-represented (or none) in multi-omics projects (e.g. GTEx; RoadMap).</li>
+<li>Publicly available placenta transcrptome data lack the depth of coverage and the sample number.</li>
+</ol>
+</div>
+</div>
+<div id="materials-methods" class="section level1">
+<h1>Materials &amp; Methods</h1>
+<ol style="list-style-type: decimal">
+<li>302 placental biopsies of the POP Study cohort<span class="citation">(Pasupathy et al. 2008; Sovio et al. 2015; Gaccioli et al. 2017)</span>, of which 94 and 56 are from cases of preeclampsia (PE) and fetal growth restriction (FGR).</li>
+<li>324 total RNA-Seq datasets (~102 million reads per sample)</li>
+<li>328 small RNA-Seq datasets (~20 million per sample)</li>
+<li>TopHat2, StringTie and Cuffcompare</li>
+<li>featureCount and DESeq2</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:fig1-sample"></span>
+<img src="Figures/SI.Fig1.jpeg" alt="Number of placental biopsies and sequencing reads" width="95%" />
+<p class="caption">
+Figure 1: Number of placental biopsies and sequencing reads
+</p>
+</div>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<div id="relative-abundance-and-complexity-of-long-and-short-rnas-in-the-placenta" class="section level2">
+<h2>1. Relative abundance and complexity of long and short RNAs in the placenta</h2>
+<div class="figure" style="text-align: center"><span id="fig:fig2-complexity"></span>
+<img src="Figures/complexity.jpg" alt="Complexity of RNA transcripts in the placenta" width="90%" />
+<p class="caption">
+Figure 2: Complexity of RNA transcripts in the placenta
+</p>
+</div>
+</div>
+<div id="genes-expressed-specifically-in-the-placenta" class="section level2">
+<h2>2. Genes expressed specifically in the placenta</h2>
+<div class="figure" style="text-align: center"><span id="fig:placenta-specific"></span>
+<img src="Figures/placenta_specific.jpg" alt="Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)" width="90%" />
+<p class="caption">
+Figure 3: Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)
+</p>
+</div>
+</div>
+<div id="highly-abundant-circular-rnas-and-short-rnas" class="section level2">
+<h2>3. Highly abundant circular RNAs and short RNAs</h2>
+<div class="figure" style="text-align: center"><span id="fig:fig3-manhattan"></span>
+<img src="Figures/manhattan.jpg" alt="Manhattan plots showing relative abundance of short RNAs" width="90%" />
+<p class="caption">
+Figure 4: Manhattan plots showing relative abundance of short RNAs
+</p>
+</div>
+</div>
+<div id="a-putative-mirna-sponge" class="section level2">
+<h2>4. A putative miRNA sponge</h2>
+<div class="figure" style="text-align: center"><span id="fig:fig4-circRNA"></span>
+<img src="Figures/circ_sponge.jpg" alt="A putative miRNA sponge and its targets miRNAs (sorry, data at non-disclosure stage)" width="100%" />
+<p class="caption">
+Figure 5: A putative miRNA sponge and its targets miRNAs (sorry, data at non-disclosure stage)
+</p>
+</div>
+</div>
+<div id="size-distribution-of-placental-small-rnas" class="section level2">
+<h2>5. Size distribution of placental small RNAs</h2>
+<div class="figure" style="text-align: center"><span id="fig:fig5-smallRNA"></span>
+<img src="Figures/smallRNA_size.jpg" alt="Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)" width="689" />
+<p class="caption">
+Figure 6: Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)
+</p>
+</div>
+</div>
+</div>
+<div id="conclusions" class="section level1">
+<h1>Conclusions</h1>
+<ol style="list-style-type: decimal">
+<li>More than 300 well phenotyped placentas sequenced to high depth.<br />
+</li>
+<li>High quality data with strand-specific total-RNA (not poly-A+ selected).</li>
+<li>Circular RNAs were characterised in the placenta.</li>
+</ol>
+</div>
+<div id="data-availability" class="section level1">
+<h1>Data availability</h1>
+<ul>
+<li>Manuscript in submission</li>
+<li><a href="https://sung.github.io/Placenta_Transcriptome_GI2019" class="uri">https://sung.github.io/Placenta_Transcriptome_GI2019</a> (this poster)</li>
+<li><a href="https://www.obgyn.cam.ac.uk/placentome" class="uri">https://www.obgyn.cam.ac.uk/placentome</a> (will be open to public soon)</li>
+<li><a href="https://www.ebi.ac.uk/ega/studies/EGAS00001002205" class="uri">https://www.ebi.ac.uk/ega/studies/EGAS00001002205</a></li>
+</ul>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-PMCID:PMC5701771">
+<p>Gaccioli, Francesca, Susanne Lager, Ulla Sovio, D. Stephen Charnock-Jones, and Gordon C. S. Smith. 2017. “The Pregnancy Outcome Prediction (Pop) Study: Investigating the Relationship Between Serial Prenatal Ultrasonography, Biomarkers, Placental Phenotype and Adverse Pregnancy Outcomes.” <em>Placenta</em> 59 (Suppl 1): S17—S25. <a href="https://doi.org/10.1016/j.placenta.2016.10.011">https://doi.org/10.1016/j.placenta.2016.10.011</a>.</p>
+</div>
+<div id="ref-PMID:19019223">
+<p>Pasupathy, Dharmintra, Alison Dacey, Emma Cook, D Stephen Charnock-Jones, Ian R White, and Gordon C S Smith. 2008. “Study Protocol. A Prospective Cohort Study of Unselected Primiparous Women: The Pregnancy Outcome Prediction Study.” <em>BMC Pregnancy and Childbirth</em> 8: 51. <a href="https://doi.org/10.1186/1471-2393-8-51">https://doi.org/10.1186/1471-2393-8-51</a>.</p>
+</div>
+<div id="ref-PMID:26360240">
+<p>Sovio, Ulla, Ian R White, Alison Dacey, Dharmintra Pasupathy, and Gordon C S Smith. 2015. “Screening for Fetal Growth Restriction with Universal Third Trimester Ultrasonography in Nulliparous Women in the Pregnancy Outcome Prediction (Pop) Study: A Prospective Cohort Study.” <em>Lancet (London, England)</em> 386 (10008): 2089—2097. <a href="https://doi.org/10.1016/S0140-6736(15)00131-2">https://doi.org/10.1016/S0140-6736(15)00131-2</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
