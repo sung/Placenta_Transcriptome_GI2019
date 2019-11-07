@@ -47,11 +47,12 @@ height: 34in;
 padding: 0cm;
 }
 .title_container {
-width: 46.8in;
-height: calc(34in * 0.15);
+width: calc(100% - 1cm - 1cm);
+height: calc(15% - 1cm - 1cm);
 overflow: hidden;
 background-color: #91B9A4;
-border: 1cm solid #91B9A4;
+border: 1cm solid #91B9A4
+;
 }
 .logo_left {
 float: left;
@@ -88,6 +89,7 @@ font-family: Helvetica;
 /* unvisited link */
 a:link {
 color: #0b4545;
+text-decoration: none;
 }
 .mybreak {
   break-before: column;
@@ -95,16 +97,19 @@ color: #0b4545;
 /* visited link */
 a:visited {
 color: #0b4545;
+text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
 color: #0b4545;
+text-decoration: none;
 }
 
 /* selected link */
 a:active {
 color: #0b4545;
+text-decoration: none;
 }
 .poster_body {
 -webkit-column-count: 4; /* Chrome, Safari, Opera */
@@ -122,9 +127,9 @@ column-rule-style: dashed;
 -webkit-column-rule-color: #008080;
 -moz-column-rule-color: #008080;
 column-rule-color: #008080;
-column-gap: 1cm;
-padding-left: calc(1cm / 2);
-padding-right: calc(1cm / 2);
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
 height: 100%;
 color: #000000
 background-color: #ffffff;
@@ -136,15 +141,15 @@ border: 0;
 font-weight: normal;
 }
 .poster_body_wrap{
-width: calc(46.8in + 1cm + 1cm);
+width: 46.8in;
 height: calc(34in * 0.83);
-padding-top: calc(34in * 0.005);
+padding-top: calc(34in * 0.01);
 padding-bottom: calc(34in * 0.01);
 background-color: #ffffff;
 }
 .poster_title h3 {
 color: #ffffff;
-font-size: 45pt;
+font-size: 43pt;
 margin: 0;
 border: 0;
 font-weight: normal;
@@ -161,7 +166,7 @@ border: 0;
 font-weight: normal;
 }
 img {
-margin-top: 2cm;
+margin-top: 0;
 margin-bottom: 0;
 }
 .section {
@@ -199,25 +204,30 @@ margin-bottom: 2cm;
 position: sticky;
 width: 100%;
 }
+div.sourceCode {
+font-size: 20pt;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+padding: 1em;
+border: 1mm solid;
+border-color: #008080;
+border-radius: 1em;
+}
 pre.sourceCode.r {
-background-color: #dddddd40;
-border-radius: 4mm;
-padding: 4mm;
-width: 75%;
+width: 100%;
 /* align-items: center; */
 margin: auto;
-padding-left: 2cm;
 }
 code.sourceCode.r{
 background-color: transparent;
-font-size: 20pt;
-border-radius: 2mm;
+color: #000000
 }
 .caption {
-font-size: 25pt;
+font-size: 20pt;
 }
 .table caption {
-font-size: 25pt;
+font-size: 20pt;
 padding-bottom: 3mm;
 
 }
@@ -255,6 +265,7 @@ margin-right: 4mm;
 margin-left: 4mm;
 margin-top: 6mm;
 margin-bottom: 10mm;
+color: #000000
 }
 .poster_body ol {
 margin-right: 4mm;
@@ -284,7 +295,7 @@ font-size: 20pt;
 <!-- Poster Title -->
 <div class= "poster_title">
 <h1 id="title">The RNA landscape of the human placenta in health and disease</h1>
-<h3 id="author">Sungsam Gong<sup>1, <a class="orcid" href="https://orcid.org/0000-0001-5796-4423"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Francesca Gaccioli<sup>1</sup>, Justyna Dopierala<sup>1</sup>, Ulla Sovio<sup>1</sup>, Gordon Smith<sup>1</sup>, D Stephen Charnock-Jones<sup>1</sup></h3><br>
+<h3 id="author">Sungsam Gong<sup>1, <a class="orcid" href="https://orcid.org/0000-0001-5796-4423"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Francesca Gaccioli<sup>1</sup>, Justyna Dopierala<sup>1</sup>, Ulla Sovio<sup>1</sup>, Gordon Smith<sup>1</sup>, D Stephen Charnock-Jones<sup>1</sup></h3>
 <h5 id="affiliation"><sup>1</sup> Department of Obstetrics and Gynaecology, University of Cambridge</br>NIHR Cambridge Biomedical Research Centre, Cambridge, United Kingdom</h5>
 </div>
 <!-- Right Logo  -->
@@ -327,10 +338,9 @@ img{
 <li>324 total RNA-Seq datasets (~102 million reads per sample)</li>
 <li>328 small RNA-Seq datasets (~20 million per sample)</li>
 <li>TopHat2, StringTie and Cuffcompare</li>
-<li>featureCount and DESeq2</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:fig1-sample"></span>
-<img src="Figures/SI.Fig1.jpeg" alt="Number of placental biopsies and sequencing reads" width="95%" />
+<img src="Figures/SI.Fig1.jpeg" alt="Number of placental biopsies and sequencing reads" width="87%" />
 <p class="caption">
 Figure 1: Number of placental biopsies and sequencing reads
 </p>
@@ -341,7 +351,7 @@ Figure 1: Number of placental biopsies and sequencing reads
 <div id="relative-abundance-and-complexity-of-long-and-short-rnas-in-the-placenta" class="section level2">
 <h2>1. Relative abundance and complexity of long and short RNAs in the placenta</h2>
 <div class="figure" style="text-align: center"><span id="fig:fig2-complexity"></span>
-<img src="Figures/complexity.jpg" alt="Complexity of RNA transcripts in the placenta" width="90%" />
+<img src="Figures/complexity.jpg" alt="Complexity of RNA transcripts in the placenta" width="88%" />
 <p class="caption">
 Figure 2: Complexity of RNA transcripts in the placenta
 </p>
@@ -350,7 +360,7 @@ Figure 2: Complexity of RNA transcripts in the placenta
 <div id="genes-expressed-specifically-in-the-placenta" class="section level2">
 <h2>2. Genes expressed specifically in the placenta</h2>
 <div class="figure" style="text-align: center"><span id="fig:placenta-specific"></span>
-<img src="Figures/placenta_specific.jpg" alt="Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)" width="90%" />
+<img src="Figures/placenta_specific.jpg" alt="Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)" width="87%" />
 <p class="caption">
 Figure 3: Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)
 </p>
@@ -377,7 +387,7 @@ Figure 5: A putative miRNA sponge and its targets miRNAs (sorry, data at non-dis
 <div id="size-distribution-of-placental-small-rnas" class="section level2">
 <h2>5. Size distribution of placental small RNAs</h2>
 <div class="figure" style="text-align: center"><span id="fig:fig5-smallRNA"></span>
-<img src="Figures/smallRNA_size.jpg" alt="Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)" width="689" />
+<img src="Figures/smallRNA_size.jpg" alt="Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)" width="73%" />
 <p class="caption">
 Figure 6: Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)
 </p>

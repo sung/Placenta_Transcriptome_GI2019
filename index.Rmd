@@ -37,7 +37,7 @@ title_textcol: "#ffffff" #colour of title text
 author_textcol: "#ffffff" # Colour of author text
 affiliation_textcol: "#FFFFFF" # Colour of affiliation text
 title_textsize: "80pt"         # Poster title fontsize
-author_textsize: "45pt"       # Author list font size
+author_textsize: "43pt"       # Author list font size
 #---POSTER BODY OPTIONS---#
 body_bgcol: "#ffffff" #colour of the poster main background
 sectitle_textsize: "50pt" # h1
@@ -97,21 +97,20 @@ knitr::opts_chunk$set(echo = FALSE)
 2. 324 total RNA-Seq datasets (~102 million reads per sample) 
 3. 328 small RNA-Seq datasets (~20 million per sample)
 4. TopHat2, StringTie and Cuffcompare
-5. featureCount and DESeq2
 
-```{r fig1-sample, out.width="95%", fig.align='center', fig.cap="Number of placental biopsies and sequencing reads"}
+```{r fig1-sample, out.width="87%", fig.align='center', fig.cap="Number of placental biopsies and sequencing reads"}
 knitr::include_graphics('Figures/SI.Fig1.jpeg')
 ```
 
 # Results
 
 ## 1. Relative abundance and complexity of long and short RNAs in the placenta 
-```{r fig2-complexity, out.width="90%", fig.align='center', fig.cap='Complexity of RNA transcripts in the placenta'}
+```{r fig2-complexity, out.width="88%", fig.align='center', fig.cap='Complexity of RNA transcripts in the placenta'}
 knitr::include_graphics('Figures/complexity.jpg')
 ```
 
 ## 2. Genes expressed specifically in the placenta
-```{r placenta-specific, out.width="90%", fig.align='center', fig.cap='Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)'}
+```{r placenta-specific, out.width="87%", fig.align='center', fig.cap='Abundance level of genes expressed specifically in the placenta (a: protein-coding, b: lincRNA)'}
 knitr::include_graphics('Figures/placenta_specific.jpg')
 ```
 
@@ -126,7 +125,7 @@ knitr::include_graphics('Figures/circ_sponge.jpg')
 ```
 
 ## 5. Size distribution of placental small RNAs  
-```{r fig5-smallRNA, fig.height=5.3, fig.align='center', fig.cap='Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)'}
+```{r fig5-smallRNA, out.width="73%", fig.align='center', fig.cap='Size distribution of placental small RNAs. (‘Mapped reads’: mapped at least 10x, ‘-miRNA’: ‘Mapped reads’ minus miRNA, ‘-miRNA-piRNA-exon’: ‘Mapped reads’ minus miRNA, piRNAs and exon)'}
 knitr::include_graphics('Figures/smallRNA_size.jpg')
 ```
 
